@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 const max = ^uint64(0)
 
 func main() {
+	time.Sleep(10 * time.Second)
 	for i := uint64(2); i <= max; i++ {
 		fmt.Printf("is %d prime? %t", i, isPrime(i))
 	}
